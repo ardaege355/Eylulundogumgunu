@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
     color: #fff;
     display: flex;
     justify-content: center;
@@ -8,16 +8,19 @@ body {
     height: 100vh;
     margin: 0;
     overflow: hidden;
+    position: relative;
 }
 
 .container {
     text-align: center;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
     border-radius: 20px;
     backdrop-filter: blur(10px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     max-width: 90%;
+    position: relative;
+    z-index: 2;
 }
 
 h1 {
@@ -34,18 +37,20 @@ h1 {
 .timer {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
     font-size: 1.5rem;
     font-weight: bold;
     flex-wrap: wrap;
 }
 
 .timer span {
-    padding: 10px 15px;
-    background: rgba(255, 255, 255, 0.3);
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     margin: 5px;
+    min-width: 60px;
+    text-align: center;
 }
 
 .compliments p {
@@ -63,6 +68,11 @@ h1 {
 
     .timer {
         font-size: 1.2rem;
+        gap: 10px;
+    }
+
+    .timer span {
+        padding: 8px 15px;
     }
 
     .compliments p {
@@ -77,9 +87,30 @@ h1 {
 
     .timer {
         font-size: 1rem;
+        gap: 5px;
+    }
+
+    .timer span {
+        padding: 5px 10px;
     }
 
     .compliments p {
         font-size: 0.9rem;
+    }
+}
+
+/* Kar Efekti */
+.snowflake {
+    position: absolute;
+    top: -10%;
+    color: #fff;
+    user-select: none;
+    pointer-events: none;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh);
     }
 }
