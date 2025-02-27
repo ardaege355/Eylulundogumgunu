@@ -36,6 +36,7 @@ h1 {
 
 .timer {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     gap: 15px;
     font-size: 1.5rem;
@@ -43,7 +44,7 @@ h1 {
     flex-wrap: wrap;
 }
 
-.timer span {
+.timer-item {
     padding: 10px 20px;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
@@ -67,12 +68,13 @@ h1 {
     }
 
     .timer {
-        font-size: 1.2rem;
+        flex-direction: column;
         gap: 10px;
     }
 
-    .timer span {
+    .timer-item {
         padding: 8px 15px;
+        font-size: 1.2rem;
     }
 
     .compliments p {
@@ -90,7 +92,7 @@ h1 {
         gap: 5px;
     }
 
-    .timer span {
+    .timer-item {
         padding: 5px 10px;
     }
 
