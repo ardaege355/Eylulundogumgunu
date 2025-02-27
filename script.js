@@ -1,5 +1,5 @@
-// Doğum günü tarihi (10 Eylül)
-const birthday = new Date("September 10, 2025 00:00:00").getTime();
+// Doğum günü tarihi (22 Ekim)
+const birthday = new Date("October 22, 2025 00:00:00").getTime();
 
 function updateCountdown() {
     const now = new Date().getTime();
@@ -17,7 +17,7 @@ function updateCountdown() {
 
     if (timeLeft < 0) {
         clearInterval(interval);
-        document.getElementById("countdown").innerHTML = "<p>Doğum günün kutlu olsun Gizem! 🎉🎂</p>";
+        document.getElementById("countdown").innerHTML = "<p>Doğum günün kutlu olsun Eylüşşş! 🎉🎂</p>";
     }
 }
 
